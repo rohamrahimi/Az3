@@ -47,4 +47,37 @@ public class RectangleTest {
         assertEquals(16.5, area);
 
     }
+
+    @Test
+    void GetWidthTest() {
+        Rectangle rectangle = new Rectangle(12, 4);
+        assertEquals(12, rectangle.getWidth());
+    }
+
+    @Test
+    void GetHeightTest() {
+        Rectangle rectangle = new Rectangle(12, 4);
+        assertEquals(4, rectangle.getHeight());
+    }
+
+    @Test
+    void SetWidthTest() {
+        Rectangle rectangle = new Rectangle(12, 4);
+        rectangle.setWidth(3);
+        assertEquals(3, rectangle.getWidth());
+    }
+
+    @Test
+    void SetHeightTest() {
+        Rectangle rectangle = new Rectangle(12, 4);
+        rectangle.setHeight(50);
+        assertEquals(50, rectangle.getHeight());
+    }
+
+    @Test
+    void NewAreaAfterChangeHeightTest() {
+        Rectangle rectangle = new Rectangle(12, 4);
+        rectangle.setHeight(50);
+        assertEquals(600, rectangle.computeArea());
+    }
 }
